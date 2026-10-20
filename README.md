@@ -140,7 +140,27 @@ gradient.Parent = frame
 
 bellow is the difference between the UIGrtadient interpolated with the standard Roblox calculation, and the one interpolated by the Oklab algorithm
 <img width="1916" height="897" alt="example" src="https://github.com/user-attachments/assets/8ee2955e-ff13-46eb-aaeb-39deb2d5c966" />
+> generated from the following code: 
+```luau
+const Replicated = game:GetService("ReplicatedStorage");
+const OklabColorSequence = require(Replicated.OklabColorSequence);
+const container  = script.Parent.Container;
+const StandardUIGradient = container.Standard.UIGradient;
+const OklabUIGradient = container.Oklab.UIGradient;
 
+
+const StartColor = Color3.fromRGB(0, 0, 255)
+const EndColor = Color3.fromRGB(255, 255, 0)
+
+StandardUIGradient.Color = ColorSequence.new({
+	ColorSequenceKeypoint.new(0, StartColor),
+	ColorSequenceKeypoint.new(1, EndColor),
+})
+
+
+OklabUIGradient.Color = OklabColorSequence.new(StandardUIGradient.Color) -- interpolates with oklab api
+
+```
 
 ### Rainbow with a custom segment count
 
