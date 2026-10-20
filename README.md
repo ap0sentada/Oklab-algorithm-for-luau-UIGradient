@@ -138,7 +138,7 @@ gradient.Color = OklabColorSequence.new(
 gradient.Parent = frame
 ```
 
-bellow, the difference between the UIGrtadient interpolated with the standard Roblox calculation, and the one interpolated by the Oklab algorithm
+bellow is the difference between the UIGrtadient interpolated with the standard Roblox calculation, and the one interpolated by the Oklab algorithm
 <img width="1916" height="897" alt="example" src="https://github.com/user-attachments/assets/8ee2955e-ff13-46eb-aaeb-39deb2d5c966" />
 
 
