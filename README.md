@@ -28,7 +28,7 @@ The module uses recent Luau syntax (`const` and the `//` floor division operator
 
 ## Installation
 
-Copy `OklabColorSequence.lua` into your project as a `ModuleScript` and require it:
+Copy `OklabColorSequence.lua` into your project as a `ModuleScript`(or import the rbxm if you want it with auto update) and require it:
 
 ```lua
 local OklabColorSequence = require(path.to.OklabColorSequence)
